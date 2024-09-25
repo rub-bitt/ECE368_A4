@@ -51,7 +51,7 @@ void switch_window(Node **head, int window_num){
 }
 
 void print_front (Node *head){
-    printf("%d", head->data);
+    printf("%d\n", head->data);
 }
 int main() {
 
