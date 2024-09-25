@@ -77,7 +77,12 @@ int main() {
         }
         
         //print element at the front of the linked list
-        print_front(head);
+        if (head == NULL) {
+            exit (0);
+        }
+        else{
+            print_front(head);
+        }
 
     }
 
