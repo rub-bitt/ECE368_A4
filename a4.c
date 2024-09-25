@@ -23,7 +23,7 @@ void close_window(Node **head, int window_num) {
     Node *previous = *head;
 
     if (*head == NULL) {
-        printf("List is already empty!");
+        exit (0);
     }
     else if(current->data == (*head)->data){
         *head = current->next;
