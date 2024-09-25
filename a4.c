@@ -25,7 +25,7 @@ void close_window(Node **head, int window_num) {
     if (*head == NULL) {
         exit (0);
     }
-    else if(current->data == (*head)->data){
+    else if(window_num == (*head)->data){
         *head = current->next;
         free(current);
         current = NULL;
@@ -36,7 +36,6 @@ void close_window(Node **head, int window_num) {
             previous = current;
             current = current->next;
         }
-        
         previous->next = current->next;
         
         free(current);
@@ -53,6 +52,14 @@ void switch_window(Node **head, int window_num){
 void print_front (Node *head){
     printf("%d\n", head->data);
 }
+void print_list (Node *head) {
+    while (head != NULL) {
+        printf("%d->", head->data);
+        head = head->next;
+    }
+    printf("\n");
+}
+
 int main() {
 
     char action[10]; //enough to hold all commands
@@ -81,7 +88,7 @@ int main() {
             exit (0);
         }
         else{
-            print_front(head);
+            print_front(head); 
         }
 
     }
