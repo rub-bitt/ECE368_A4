@@ -1,5 +1,2 @@
-a4: 
-	gcc -g -o a4 a4.c
-
-clean veryclean:
-	rm -f a1
+Build: a4.c
+	gcc a4.c -o a4.exe

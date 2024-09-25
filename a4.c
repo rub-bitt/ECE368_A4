@@ -47,7 +47,12 @@ void close_window(Node **head, int window_num) {
 void switch_window(Node **head, int window_num){
     //bring chosen window_num to the front and delete former position
     close_window(head, window_num);
+    printf("\nswitch close");
+    print_front(*head);
     open_window(head, window_num);
+    printf("\nswitch open");
+    print_front(*head);
+
 }
 
 void print_front (Node *head){
